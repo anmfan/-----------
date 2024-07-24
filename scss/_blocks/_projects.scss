@@ -1,0 +1,174 @@
+.projects {
+    background-color: var(--black);
+
+    .projects-container{
+        max-width: 1450px;
+        padding: 120px 10px 120px 72px;
+        margin: 0 auto;
+
+        .projects__cards {
+            display: flex;
+            column-gap: 24px;
+
+            .projects__cards-text {
+                display: flex;
+                flex-direction: column;
+                row-gap: 80px;
+
+                .projects__text{
+                    display: flex;
+                    flex-direction: column;
+                    width: 572px;
+                    row-gap: 0.5rem;
+                    
+                    .projects-heading {
+                        font-family: 'Sen';
+                        font-weight: 700;
+                        font-size: 1rem;
+                        line-height: 150%;
+                        text-transform: uppercase;
+                        color: var(--light-grey);
+                    }
+        
+                    h2 {
+                        font-family: 'Sen';
+                        font-weight: 700;
+                        font-size: 55px;
+                        color: var(--white);
+                    }
+                }
+
+                .projects__cards-left {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 24px;
+
+                    .cards-details__background {
+                        max-width: 636px;
+                        background: var(--level-1);
+                        padding: 40px 32px;
+                    }
+
+                    img{
+                        display: block;
+                        max-width: 100%;
+                        max-height: 620px;
+                    }
+
+                    h4{
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 150%;
+                        color: var(--white);
+                        margin-bottom: 13px;
+                    }
+
+                    p {
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 150%;
+                        color: var(--light-grey);
+                    }
+                }
+            }
+        }
+
+        .projects__cards-right {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+
+            .cards-details__background-right {
+                max-width: 636px;
+                background: var(--level-1);
+                padding: 40px 32px;
+            }
+
+            img{
+                display: block;
+                max-width: 100%;
+                max-height: 620px;
+            }
+
+            h4{
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 150%;
+                color: var(--white);
+                margin-bottom: 13px;
+            }
+
+            p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                color: var(--light-grey);
+            }
+
+            .projects__cards-button {
+                display: flex;
+                justify-content: center;
+                padding-top: 91px;
+
+                .projects-btn {
+                    display: inline-block;
+                    padding: 24px 32px;
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 150%;
+                    text-transform: uppercase;
+                    color: var(--white);
+                    background-color: transparent;
+                    cursor: pointer;
+                    border: 1px solid var(--purple);
+                    transition: all 0.2s ease-in;
+
+                    &:hover {
+                        background-color: var(--purple);
+                    }
+
+                    &:active {
+                        scale: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .projects {
+
+        .projects-container {
+            transition: padding 0.2s ease-in;
+            padding: 80px 0;
+    
+            .projects__cards {
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 48px;
+
+                .projects__cards-button {
+                    display: none;
+                }
+
+                .projects__cards-text {
+
+                    .projects__cards-left {
+                        row-gap: 48px;
+                    }
+                }
+
+                .projects__cards-right {
+                    row-gap: 48px;
+                }
+            }
+        }
+    }
+}

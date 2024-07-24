@@ -1,0 +1,96 @@
+.instagram{
+    background-color: var(--violet-accent);
+
+    .instagram__container{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 0 0 72px;
+        column-gap: 72px;
+
+        .instagram__left{
+            display: flex;
+            flex-direction: column;
+            row-gap: clamp(3.75rem, -3.188rem + 14.45vw, 8.375rem);
+            height: clamp(28.125rem, 19.853rem + 36.76vw, 37.5rem);
+            max-width: 50%;
+            padding-top: 120px;
+
+            .instagram__text {
+                display: flex;
+                flex-direction: column;
+                row-gap: 24px;
+
+                h2{
+                    font-family: 'Sen';
+                    font-weight: 700;
+                    font-size: 55px;
+                    color: var(--level-1);
+                }
+    
+                p{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: var(--dark-grey);
+                }
+            }
+
+            .instagram__link {
+
+                a{
+                    display: inline-block;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: var(--level-1);
+                    position: relative;
+
+                    &:hover{
+                        color: #6a6b79;
+                        scale: 1.2;
+                    }
+
+                    &::after{
+                        content: "";
+                        background-color: var(--light-grey);
+                        position: absolute;
+                        height: 1px;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        top: 100%;
+                    }
+                }
+            }
+        }
+
+        .instagram__right{
+
+            .instagram-image{
+                width: clamp(24rem, 50vw, 45rem);
+                min-height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .instagram {
+
+        .instagram__container {
+            transition: all 0.2s ease-in;
+            padding: 0 0 0 40px;
+            column-gap: 40px;
+
+            .instagram__left {
+                transition: all 0.2s ease-in;
+                padding-top: 80px;
+            }
+        }
+    }
+}

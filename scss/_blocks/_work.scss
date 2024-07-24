@@ -1,0 +1,96 @@
+.work {
+    background-color: var(--black);
+
+    .work-container {
+        max-width: 1440px;
+        // padding: 120px 72px 144px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        padding-left: 72px;
+        padding-right: 72px;
+        margin: 0 auto;
+
+        .work__title {
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            margin-bottom: 40px;
+
+            p{
+                font-family: 'Sen';
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 150%;
+                text-transform: uppercase;
+                color: var(--light-grey);
+            }
+
+            h2{
+                font-family: 'Sen';
+                font-weight: 700;
+                font-size: 55px;
+                color: var(--white);
+            }
+        }
+
+        .work__companies{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            column-gap: 31px;
+
+            .work__cards{
+                color: var(--white);
+
+                h2{
+                    font-family: 'Sen';
+                    font-weight: 400;
+                    font-size: 117px;
+                    color: var(--light-grey);
+                    word-wrap: break-word;
+                }
+
+                h3{
+                    font-family: 'Sen';
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 150%;
+                    margin-bottom: 22px;
+                }
+
+                p{
+                    font-family: 'Sen';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: var(--light-grey);
+                }
+            }
+
+            .first-card{
+
+                span{
+                    color: var(--green-accent);
+                }
+            }
+
+            .second-card{
+
+                span{
+                    color: var(--blue-accent);
+                }
+            }
+
+            .third-card{
+
+                p{
+                    padding-right: 0;
+                }
+
+                span{
+                    color: var(--pink-accent);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.skillset{
+    background-color: var(--black);
+
+    .skillset__container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 120px;
+        max-width: 1440px;
+        padding: 120px 0 44px;
+        margin: 0 auto;
+
+        .skillset__top{
+            display: flex;
+            column-gap: 72px;
+            padding: 0 72px;
+
+            .skillset__text{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.5rem;
+                flex-basis: 368px;
+
+                h2{
+                    font-family: 'Sen';
+                    font-weight: 700;
+                    font-size: 55px;
+                    color: var(--white);
+                }
+
+                .text-desc{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: var(--light-grey);
+                }
+            }
+
+            .skillset__skills{
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                width: fit-content;
+                gap: 48px 72px;
+
+                .skillset__skills-card{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+
+                    h3{
+                        font-family: 'Sen';
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 150%;
+                        color: var(--white);
+                    }
+
+                    p{
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: var(--light-grey);
+                    }
+                }
+            }
+        }
+
+        .skillset__bottom{
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            padding-left: 72px;
+            padding-right: 72px;
+
+            .skillset__bottom-card{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 33px 0;
+                position: relative;
+
+                .icons-companies path{
+                    transition: all 0.2s ease-in;
+                }
+
+                &:hover{
+
+                    .icons-companies path{
+                        fill: rgb(224, 158, 158);
+                    }
+                }
+
+                &:not(.sixth) {
+                    border-right: 1px solid var(--level-1);
+                }
+            }
+
+            .first{
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    left: 0;
+                    bottom: 0;
+                    background-color: var(--level-1);
+                }
+            }
+
+            .sixth {
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    right: 0;
+                    bottom: 0;
+                    background-color: var(--level-1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .skillset{
+
+        .skillset__container {
+            padding-top: 80px;
+            padding-bottom: 0;
+
+            .skillset__top {
+                transition: all 0.2s ease-in;
+                flex-direction: column;
+                row-gap: 48px;
+                padding: 0 40px;
+    
+                .skillset__text {
+                    flex-basis: auto;
+                }
+            }
+
+            .skillset__bottom {
+                transition: all 0.2s ease-in;
+                grid-template-columns: repeat(2, auto);
+                padding: 0;
+
+                .skillset__bottom-card {
+                    padding: 40px 0;
+                    border: 1px solid var(--level-1);
+                }
+            }
+        }
+    }
+}

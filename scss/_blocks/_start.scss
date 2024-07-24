@@ -1,0 +1,108 @@
+.start {
+    background-color: var(--black);
+
+    .start__container {
+        display: flex;
+        column-gap: 24px;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 120px 182px;
+
+        .start__text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            flex-basis: 526px;
+            
+            h2 {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 55px;
+                color: var(--white);               
+            }
+
+            p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                color: var(--light-grey);                
+            }
+        }
+
+        .start__form {
+            width: 50%;
+        }
+
+        .start__form-auth {
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            width: 100%;
+
+            .start__form-label {
+                display: block;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--white);                
+            }
+
+            .start__form-field {
+                display: flex;
+                flex-direction: column;
+                row-gap: 8px;
+                width: 100%;
+                
+                .start__form-label, .start__form-input, .start__form-textarea, .start__form-btn {
+                    width: 100%;
+                }
+
+                .start__form-input, .start__form-textarea, .start__form-btn {
+                    height: 52px;
+                    background: var(--level-1);
+                    color: #9696a3;
+                    font-size: 20px;
+                    padding-left: 10px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .start__form-textarea {
+                    color: var(--white);
+                    height: 100px !important;
+                    resize: none;
+                    padding-top: 10px;
+                    color: #9696a3;
+                }
+
+                .start__form-btn {
+                    height: 75px;
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 150%;
+                    text-transform: uppercase;
+                    color: var(--white);
+                    background: var(--purple);       
+                    cursor: pointer;
+                    transition: all 0.2s ease-in;
+                    
+                    
+                    &:hover {
+                        background: #fff;
+                        color: var(--black);
+                        border: 2px solid var(--purple);
+                    }
+
+                    &:active {
+                        scale: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}

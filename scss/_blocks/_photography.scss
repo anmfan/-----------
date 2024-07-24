@@ -1,0 +1,103 @@
+.photography{
+    background: var(--black);
+
+    .photography__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 120px 72px;
+        row-gap: 64px;
+
+        .photography__text {
+            display: flex;
+            flex-direction: column;
+            max-width: 45%;
+            row-gap: 24px;
+
+            h2 {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 55px;
+                color: var(--white);
+                word-break: break-all;             
+            }
+
+            p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                color: var(--light-grey);          
+            }
+        }
+
+        .photography__swiper {
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+
+            .photography__swiper-tabs {
+                display: flex;
+                column-gap: 24px;
+
+                .photography__swiper-items {
+
+                    .photography-btn-tab {
+                        padding: 16px 24px;
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 150%;
+                        text-transform: uppercase;
+                        color: var(--white);
+                        cursor: pointer;
+                        transition: all 0.2s ease-in;     
+                        
+                        &:active{
+                            scale: 0.9;
+                        }
+                    }
+
+                }
+
+                .first-tab--active {
+
+                    .photography-btn-tab {
+                        background: var(--purple);
+
+                        &:hover{
+                            background: transparent;
+                            border: 1px solid var(--purple);
+                        }
+                    }
+                }
+
+                .second-tab, .third-tab, .fourth-tab {
+
+                    .photography-btn-tab {
+                        background: transparent;
+                        border: 1px solid var(--purple);
+
+                        &:hover {
+                            background: var(--purple);
+                        }
+                    }
+                }
+            }
+
+            .photography__swiper-images {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 24px;
+
+                .photography__swiper-cards {
+
+                     img {
+                        max-width: 100%;
+                     }
+                }
+            }
+        }
+    }
+}
